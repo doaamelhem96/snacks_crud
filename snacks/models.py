@@ -5,7 +5,7 @@ from django.urls import reverse
 class Snack(models.Model):
     title=models.CharField(max_length=255,help_text='insert the title of snacks')
     purchaser=models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
-    description =models.TextField(blank=True)
+    description =models.TextField(default="anythings")
 
     def __str__ (self):
        return self.title

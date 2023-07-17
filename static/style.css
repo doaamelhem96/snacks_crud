@@ -70,16 +70,4 @@ padding-right: 60px;
   border-color: blueviolet;
 
   }
-  .link2:hover{
-
-
-    padding-right: 60px;
-     color: red;
-      background-color:greenyellow;
-      transition: transform 0.3s ease-in-out;
-      transform: translateY(-9px);
-      
-     
-      border-color: blueviolet;
-    
-      }
+  
