@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block title%} Delete_Snacks {% endblock %}
+{% block content%}
+<h1> Delete</h1>
+<form method="post">
+    {% csrf_token%}
+    <h3> Are you sure you want to Delete this Kind of Snacks</h3>
+    
+    <input type="submit" value="Yes">
+    <a href="{% url 'snacklist' %}"> <input type="submit" value="No"></a>
+</form>
+
+
+
+{% endblock%}

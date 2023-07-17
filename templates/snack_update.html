@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block title%} Update a Snack  {%endblock%}
+
+{% block content%}
+<h1>Update {{s.title}}</h1><br/>
+<form method="post"><table>
+    {% csrf_token %}
+    
+    {{ form.as_table}}
+
+</table>
+<button type="submit">Update</button>
+
+</form>
+{%endblock%}
