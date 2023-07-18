@@ -1,13 +1,12 @@
-{%extends 'base.html'%}
-{%block title%} Create a Snack  {%endblock%}
-{% block content%}
+{% extends 'base.html' %}
+{% block title %}Create a Snack{% endblock %}
+{% block content %}
 <h1>Add Snacks</h1><br/>
-<form method="post"><table>
+<form method="post">
+  <table>
     {% csrf_token %}
-    
-    {{ form.as_table}}
-
-</table>
-<button type="submit">Submit</button>
+    {{ form.as_table }}
+  </table>
+  <button type="submit">Submit</button>
 </form>
-{%endblock%}
+{% endblock %}

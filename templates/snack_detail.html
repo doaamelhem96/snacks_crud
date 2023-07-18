@@ -1,10 +1,9 @@
-{%extends 'base.html'%}
-{%block title%}Snack Details {%endblock%}
-{% block content%}
-<H1>Snack_Details</H1>
-<h3>Title: {{snack.title}}</h3>
-<h3>Purchaser: {{snack.purchaser}}</h3>
-<h3>Description: {{snack.description| capfirst}}</h3>
-<button type="submit"><a href="{% url 'sna_updates' pk=snack.pk %}">Update</a></button>
-
-{%endblock%}
+{% extends 'base.html' %}
+{% block title %}Snack Details{% endblock %}
+{% block content %}
+<h1>Snack Details</h1>
+<h3>Title: {{ snack.title }}</h3>
+<h3>Purchaser: {{ snack.purchaser }}</h3>
+<h3>Description: {{ snack.description|capfirst }}</h3>
+<a href="{% url 'sna_updates' pk=snack.pk %}"><button type="button">Update</button></a>
+{% endblock %}

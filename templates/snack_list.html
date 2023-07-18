@@ -1,33 +1,27 @@
 {% extends 'base.html' %}
-{%block title%} List of The Snack  {%endblock%}
+{% block title %}List of Snacks{% endblock %}
 
 {% block content %}
 <br>
 <table>
-  <thead >
+  <thead>
     <tr>
-      <th style=" color:red;">Snack's_Name</th>
+      <th style="color: red;">Snack's Name</th>
       <th></th>
       <th></th>
-      
     </tr>
-   
   </thead>
   <tbody>
-    {% for x in object_list %}
+    {% for snack in object_list %}
     <tr>
-      <td><a href="{% url 'details' x.id %}">{{ x.title }}</a></td>
-      <td><a class ="link2" href="{% url 'sna_updates' pk=x.pk %}"><button  type="button">Update</button></a></td>
-<td><a href="{% url 'sna_delete' pk=x.pk %}"><button type="button">Delete</button></a></td>
-</tr>
-{% endfor %}
-<br>
-<tr>
-    <td ><button type="submit"><a class ="link" href="{% url 'snack_create' %} ">Create Snacks</a></button>
-    </td>
-</tr>
-
-      
+      <td><a href="{% url 'details' snack.id %}">{{ snack.title }}</a></td>
+      <td><a href="{% url 'sna_updates' pk=snack.pk %}"><button type="button">Update</button></a></td>
+      <td><a href="{% url 'sna_delete' pk=snack.pk %}"><button type="button">Delete</button></a></td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td><button type="submit"><a class="link" href="{% url 'snack_create' %}">Create Snacks</a></button></td>
+    </tr>
   </tbody>
 </table>
 <br>

@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(242, 246, 244);
+    color: rgb(61, 55, 71);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 ,h2.h2
+{
+    display: flex;
+    flex-wrap: wrap;
+    color: blue;
+    justify-content: center;
+   
+}
+.link:hover{
+
+
+    padding-right: 60px;
+     color: red;
+      background-color:greenyellow;
+      transition: transform 0.3s ease-in-out;
+      transform: translateY(-9px);
+      
+     
+      border-color: blueviolet;
+    
+      }
+table
+{
+    display:flex;
+    background-color: yellowgreen;
+    justify-content: center;
+
+
+
+
+}
+nav{
+    text-align: left ;
+    
+}
+button
+{
+    background-color: rgb(244, 212, 6);
+}
+
+#home:hover{
+    transform: translateY(-9px);
+    color: rgb(226, 5, 89);
+    background-color: aquamarine;
+    border-color: blueviolet;
+
+}
+#home{
+    display:flex;
+    color :blue;
+    font-size: xx-large;
+    justify-content: center;
+    border: 14px solid rgb(255, 255, 0);
+    background-color: blanchedalmond;
+    transition: transform 0.3s ease-in-out;
+    
+}
